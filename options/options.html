@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Obsidian Definition Highlights - Options</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Obsidian Definition Highlights Settings</h1>
+    </header>
+    
+    <main>
+      <form id="settingsForm">
+        <div class="form-group">
+          <label for="apiKey">API Key</label>
+          <input type="password" id="apiKey" placeholder="Enter your Obsidian Local REST API key">
+          <small>Get this from the Obsidian Local REST API plugin settings</small>
+        </div>
+        
+        <div class="form-group">
+          <label for="apiPort">API Port</label>
+          <input type="number" id="apiPort" placeholder="27123">
+          <small>The port configured in the Obsidian Local REST API plugin</small>
+        </div>
+        
+        <div class="form-group">
+          <label for="vaultName">Vault Name</label>
+          <input type="text" id="vaultName" placeholder="Enter your Obsidian vault name">
+          <small>The name of your Obsidian vault (case-sensitive)</small>
+        </div>
+        
+        <div class="form-group">
+          <label for="refreshInterval">Refresh Interval (minutes)</label>
+          <input type="number" id="refreshInterval" min="5" max="1440" placeholder="30">
+          <small>How often to refresh definitions from Obsidian</small>
+        </div>
+        
+        <div class="form-group">
+          <label for="highlightColor">Highlight Color</label>
+          <input type="color" id="highlightColor" value="#ffeb3b50">
+          <small>The color used to highlight defined terms</small>
+        </div>
+        
+        <div class="form-actions">
+          <button type="submit" id="saveButton" class="primary">Save Settings</button>
+          <button type="button" id="testConnectionButton">Test Obsidian Connection</button>
+        </div>
+      </form>
+      
+      <div id="connectionStatus" class="hidden">
+        <div class="status-indicator">
+          <span class="dot" id="statusDot"></span>
+          <span id="statusText">Testing connection...</span>
+        </div>
+      </div>
+      
+      <div id="saveMessage" class="hidden">
+        Settings saved successfully!
+      </div>
+    </main>
+    
+    <footer>
+      <p>This extension requires the <a href="https://github.com/coddingtonbear/obsidian-local-rest-api" target="_blank">Obsidian Local REST API plugin</a> to be installed and configured in Obsidian.</p>
+      <p><a href="https://github.com/scottymcandrew/obsidian-definition-highlights" target="_blank">View on GitHub</a></p>
+    </footer>
+  </div>
+  
+  <script src="options.js"></script>
+</body>
+</html>
