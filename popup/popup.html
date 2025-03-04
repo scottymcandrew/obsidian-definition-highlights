@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Obsidian Definition Highlights</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Obsidian Definition Highlights</h1>
+      <div class="toggle-container">
+        <label class="switch">
+          <input type="checkbox" id="enableToggle">
+          <span class="slider round"></span>
+        </label>
+        <span id="statusText">Enabled</span>
+      </div>
+    </header>
+    
+    <main>
+      <div class="stats-container">
+        <div class="stat">
+          <div class="stat-number" id="definitionCount">0</div>
+          <div class="stat-label">Definitions</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number" id="highlightCount">0</div>
+          <div class="stat-label">Highlighted</div>
+        </div>
+      </div>
+      
+      <div class="buttons">
+        <button id="refreshButton" class="primary">Refresh Definitions</button>
+        <button id="settingsButton">Settings</button>
+      </div>
+      
+      <div class="last-updated">
+        <span>Last updated: </span>
+        <span id="lastUpdatedTime">Never</span>
+      </div>
+    </main>
+    
+    <footer>
+      <div class="status-indicator">
+        <span class="dot" id="statusDot"></span>
+        <span id="connectionStatus">Checking Obsidian connection...</span>
+      </div>
+    </footer>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
