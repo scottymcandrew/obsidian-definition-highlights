@@ -1,0 +1,71 @@
+/**
+ * Obsidian Definition Highlights - Content Styles
+ */
+
+/* Highlighted definition terms */
+.obsidian-definition-highlight {
+  background-color: rgba(255, 235, 59, 0.3);
+  border-bottom: 1px dotted #666;
+  cursor: help;
+  transition: background-color 0.2s ease;
+}
+
+.obsidian-definition-highlight:hover {
+  background-color: rgba(255, 235, 59, 0.5);
+}
+
+/* Override any site-specific styles that might interfere */
+.obsidian-definition-highlight a,
+a.obsidian-definition-highlight {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+/* Tippy.js theme override - create an Obsidian-like appearance */
+.tippy-box[data-theme~='obsidian'] {
+  background-color: #fff;
+  color: #333;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  max-width: 400px !important;
+  border: 1px solid #e1e1e1;
+}
+
+.tippy-box[data-theme~='obsidian'] .tippy-content {
+  padding: 10px;
+}
+
+.tippy-box[data-theme~='obsidian'] .tippy-arrow {
+  color: #fff;
+}
+
+/* Tooltip elements */
+.obsidian-definition-tooltip h3 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 4px;
+  font-weight: 600;
+}
+
+.obsidian-definition-tooltip p {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.obsidian-definition-tooltip a {
+  display: inline-block;
+  font-size: 12px;
+  color: #7E6BEF;
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: #F0EDFF;
+  transition: background-color 0.2s ease;
+}
+
+.obsidian-definition-tooltip a:hover {
+  background-color: #E2DBFF;
+}
