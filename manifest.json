@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "Obsidian Definition Highlights",
+  "version": "1.0.0",
+  "description": "Highlights terms on webpages that match definitions in your Obsidian vault",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://127.0.0.1:*/"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["lib/mark.min.js", "lib/tippy.min.js", "content.js"],
+      "css": ["styles/content.css"]
+    }
+  ],
+  "options_page": "options/options.html",
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["images/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
